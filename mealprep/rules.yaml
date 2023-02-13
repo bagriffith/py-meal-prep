@@ -1,0 +1,26 @@
+0:
+  include:
+    categories:
+      - breakfast
+  exclude:
+    tags:
+      - freezable
+1:
+  include:
+    tags:
+      - slow-cooker
+3:
+  include:
+    categories:
+      - dinner
+  exclude:
+    tags:
+      - slow-cooker
+      - freezable
+4:
+  include:
+    tags:
+      - freezable
+  exclude:
+    tags:
+      - slow-cooker

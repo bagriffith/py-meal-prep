@@ -129,6 +129,9 @@ class MealieCalendar(mealprep.MealCalendar):
         for page in range(PAGE_LIMIT):
             response = self.api.get_planned_meals(date, date, page=page)
             for item in response['items']:
+                if item['recipe'] is None:
+                    continue
+
                 slug = item['recipe']['slug']
                 recipes.append(json_to_recipe(self.api.get_recipe(slug)))
             if response['total_pages'] <= page + 1:

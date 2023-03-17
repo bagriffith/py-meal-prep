@@ -21,7 +21,7 @@ class Mealie:
         api_token (str): Mealie api token for this service.
     """
     def __init__(self, mealie_url, api_token):
-        if url is None:
+        if mealie_url is None:
             raise ValueError()
         self.url = str(mealie_url) # TODO, make this some url object or check its format
 
